@@ -4,17 +4,23 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: "module",
     },
-    plugins: ["@typescript-eslint", "prettier"],
+    plugins: [
+        "@typescript-eslint",
+        "prettier",
+        "sort-imports-es6-autofix"
+    ],
     settings: {
         "import/parsers": {
             "@typescript-eslint/parser": [".ts", ".tsx"],
+        },
+        "react": {
+            "version": "detect",
         },
         "import/resolver": {
             typescript: {},
         },
     },
     extends: [
-		"airbnb",
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
@@ -27,14 +33,18 @@ module.exports = {
             "error",
             { extensions: [".js", ".jsx", ".ts", ".tsx"] },
         ],
-        "import/no-extraneous-dependencies": [
-            "error",
-            { devDependencies: ["**/test.tsx", "**/test.ts"] },
-        ],
+        "sort-imports-es6-autofix/sort-imports-es6": ["error", {
+            "ignoreCase": false,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }],
         "quotes": ["error", "double"],
-        "@typescript-eslint/indent": ["error", 4],
-        "sort-imports": "error",
-        "linebreak-style": ["error", process.env.NODE_ENV === 'prod' ? "unix" : "windows"],
-        "react/jsx-wrap-multilines": ["none"]
+        "sort-imports": ["off"],
+        "linebreak-style": ["error", "windows"],
+        "react/jsx-wrap-multilines": ["off"],
+        "react/prop-types": ["off"],
+        "@typescript-eslint/explicit-module-boundary-types": ["off"],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "no-case-declarations": ["off"],        
     },
 };

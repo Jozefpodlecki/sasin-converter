@@ -1,12 +1,10 @@
-import React from "react"
-import { render, fireEvent } from "@testing-library/react"
-import Footer from "./index"
+import { render } from "@testing-library/react";
+import Footer from "./index";
+import React from "react";
 
-describe('Footer spec', () => {
-    
-    it('renders the component', () => {
-        const container = render(<Footer />)
+describe("Footer spec", () => {
+    it("renders the component", () => {
+        const container = render(<Footer />);
         expect(container).toMatchSnapshot();
     });
-
 });

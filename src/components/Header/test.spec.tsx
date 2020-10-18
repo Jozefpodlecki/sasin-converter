@@ -1,12 +1,10 @@
-import React from "react"
-import { render, fireEvent } from "@testing-library/react"
-import Header from "./index"
+import { render } from "@testing-library/react";
+import Header from "./index";
+import React from "react";
 
-describe('Header spec', () => {
-    
-    it('renders the component', () => {
-        const container = render(<Header />)
+describe("Header spec", () => {
+    it("renders the component", () => {
+        const container = render(<Header />);
         expect(container).toMatchSnapshot();
     });
-   
 });

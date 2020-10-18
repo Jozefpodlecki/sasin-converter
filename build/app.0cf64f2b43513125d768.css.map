@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///src/styles.scss"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,sBAAsB;EACtB,eAAe;EACf,SAAS,EAAE;;AAEb;EACE,eAAe,EAAE","file":"app.0cf64f2b43513125d768.css","sourcesContent":["html, body {\n  height: 100%;\n  box-sizing: border-box;\n  font-size: 1rem;\n  margin: 0; }\n\n#root {\n  height: inherit; }\n"],"sourceRoot":""}

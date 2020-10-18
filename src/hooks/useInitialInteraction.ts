@@ -1,21 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export const useInitialInteraction = (onInteraction: Function) => {
-    
+export const useInitialInteraction = (
+    onInteraction: (event: Event) => void
+) => {
     useEffect(() => {
+        const callback = (event: Event) => {
+            onInteraction(event);
 
-		const callback = (event: any) => {
-			onInteraction(event);
+            window.removeEventListener("click", callback);
+        };
 
-			window.removeEventListener("click", callback);
-		}
+        window.addEventListener("click", callback);
 
-		window.addEventListener("click", callback)
-
-		return () => {
-			window.removeEventListener("click", callback);
-		};
-
-		
+        return () => {
+            window.removeEventListener("click", callback);
+        };
     }, []);
-}
+};

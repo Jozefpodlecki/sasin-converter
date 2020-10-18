@@ -7,7 +7,7 @@
   "scripts": {
     "build:development": "cross-env TS_NODE_PROJECT=\"tsconfig-webpack.json\" webpack --config webpack.development.ts",
     "build:production": "cross-env TS_NODE_PROJECT=\"tsconfig-webpack.json\" webpack --config webpack.production.ts",
-    "prettier-format": "prettier 'src/**/*.ts' --write",
+    "prettier-format": "prettier src/**/*.tsx --write",
     "lint": "eslint src --ext .ts,.tsx --fix",
     "test": "jest",
     "testlint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
@@ -68,6 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
     "identity-obj-proxy": "^3.0.0",

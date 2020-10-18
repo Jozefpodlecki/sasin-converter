@@ -11,7 +11,7 @@ const config: Configuration = merge(common, {
     mode: environment,
     output: {
         path: resolve(__dirname, "build"),
-        publicPath: "/sasin-converter",
+        publicPath: "/sasin-converter/",
         filename: "[name].bundle.js"
     },
     module: {
